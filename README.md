@@ -1,6 +1,5 @@
 # El-neros-Deals
 Top Produkte top Service 
-// i18n definitions omitted for brevity in this python cell, kept same as before
 EN
 El Nero's
 Deals – GlobalShop
