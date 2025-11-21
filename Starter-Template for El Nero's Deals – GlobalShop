@@ -1,0 +1,1 @@
+Starter-Template for El Nero's Deals – GlobalShop
