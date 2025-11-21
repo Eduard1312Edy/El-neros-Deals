@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El Nero's Deals – GlobalShop</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="page-wrapper">
+    <header class="site-header">
+      <div class="logo-block">
+        <div class="logo-mark">EN</div>
+        <div class="logo-text">
+          <div class="logo-title">El Nero's</div>
+          <div class="logo-subtitle">Deals – GlobalShop</div>
+        </div>
+      </div>
+      <div class="header-controls">
+        <div class="language-switcher">
+          <label for="language-select" data-i18n="label_language">Language</label>
+          <select id="language-select">
+            <option value="en">English</option>
+            <option value="de">Deutsch</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+            <option value="it">Italiano</option>
+            <option value="tr">Türkçe</option>
+            <option value="zh">中文</option>
+            <option value="ro">Română</option>
+            <option value="ru">Русский</option>
+            <option value="nl">Nederlands</option>
+            <option value="be">Belgisch</option>
+            <option value="sr">Српски</option>
+            <option value="hu">Magyar</option>
+          </select>
+        </div>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+          <span class="theme-icon" id="theme-icon">☀️</span>
+        </button>
+        <button class="auth-button" data-i18n="btn_login">Login</button>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section class="hero">
+        <div class="hero-text">
+          <h1 data-i18n="hero_title">Finde die besten Deals weltweit.</h1>
+          <p data-i18n="hero_subtitle">
+            Vergleiche Millionen von Produkten aus internationalen Shops – mit einem Klick.
+          </p>
+          <div class="search-bar">
+            <input
+              id="search-input"
+              type="text"
+              placeholder="Suche nach einem Produkt, z. B. iPhone, Sneakers ..."
+              data-i18n-placeholder="search_placeholder"
+            />
+            <button id="search-button" data-i18n="btn_search">Suchen</button>
+          </div>
+          <p class="hero-note" data-i18n="hero_note">
+            *Alle Käufe erfolgen sicher bei unseren Partner-Shops. Wir erhalten ggf. eine Provision.
+          </p>
+        </div>
+        <div class="hero-panel">
+          <h2 data-i18n="panel_trending_title">Beliebte Kategorien</h2>
+          <div class="categories-grid">
+            <button class="category-chip" data-category="electronics" data-i18n="cat_electronics">Elektronik</button>
+            <button class="category-chip" data-category="fashion" data-i18n="cat_fashion">Mode</button>
+            <button class="category-chip" data-category="home" data-i18n="cat_home">Wohnen</button>
+            <button class="category-chip" data-category="sports" data-i18n="cat_sports">Sport &amp; Outdoor</button>
+            <button class="category-chip" data-category="kids" data-i18n="cat_kids">Kinder</button>
+            <button class="category-chip" data-category="beauty" data-i18n="cat_beauty">Beauty</button>
+          </div>
+          <div class="hero-badges">
+            <span data-i18n="badge_affiliate">Affiliate-Plattform</span>
+            <span data-i18n="badge_worldwide">Weltweite Anbieter</span>
+            <span data-i18n="badge_secure">Sichere Weiterleitung</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="products-section">
+        <div class="section-header">
+          <h2 data-i18n="section_results_title">Top-Deals (Demo-Daten)</h2>
+          <p data-i18n="section_results_subtitle">
+            Hier siehst du Beispiel-Produkte. Später werden hier automatisch echte Produktdaten von Partner-Shops geladen.
+          </p>
+        </div>
+        <div id="products-grid" class="products-grid">
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-left">
+        <span>&copy; <span id="year"></span> El Nero's Deals – GlobalShop</span>
+        <span class="footer-dot">•</span>
+        <span data-i18n="footer_rights">Alle Rechte vorbehalten.</span>
+      </div>
+      <div class="footer-links">
+        <a href="#" data-i18n="footer_privacy">Datenschutz</a>
+        <a href="#" data-i18n="footer_terms">AGB</a>
+        <a href="#" data-i18n="footer_imprint">Impressum</a>
+      </div>
+    </footer>
+  </div>
+
+  <button class="assistant-button" id="assistant-toggle">
+    🤖
+    <span data-i18n="assistant_button">Frag den Deal‑Assistenten</span>
+  </button>
+
+  <div class="assistant-panel" id="assistant-panel">
+    <div class="assistant-header">
+      <span class="assistant-title">El Nero's Deal‑Assistent</span>
+      <button class="assistant-close" id="assistant-close">×</button>
+    </div>
+    <div class="assistant-messages" id="assistant-messages">
+      <div class="assistant-message assistant-message--bot" data-i18n="assistant_welcome">
+        Hi! Ich helfe dir, die besten Angebote zu finden. Frag mich z. B.: „Zeig mir günstige Sneakers aus Europa“.
+      </div>
+    </div>
+    <form class="assistant-input-row" id="assistant-form">
+      <input
+        type="text"
+        id="assistant-input"
+        autocomplete="off"
+        placeholder="Frag nach einem Produkt oder einem Deal ..."
+        data-i18n-placeholder="assistant_placeholder"
+      />
+      <button type="submit" data-i18n="assistant_send">Senden</button>
+    </form>
+    <p class="assistant-note" data-i18n="assistant_note">
+      Hinweis: Diese Demo-Version beantwortet Fragen noch lokal. Später wird hier ein echter KI‑Assistent angeschlossen.
+    </p>
+  </div>
+
+  <script src="i18n.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
